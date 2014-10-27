@@ -1,6 +1,6 @@
 .panel.panel-default
   .panel-heading.clearfix
-    = search_field_tag :filter_projects, nil, placeholder: 'Filter by name', class: 'dash-filter form-control'
+    = search_field_tag :filter_projects, nil, placeholder: '名字过滤', class: 'dash-filter form-control'
     - if current_user.can_create_project?
       = link_to new_project_path, class: "btn btn-new pull-right" do
         %i.fa.fa-plus
@@ -9,7 +9,7 @@
   %ul.well-list.dash-list
     - projects.each do |project|
       %li.project-row
-        = render "project", project: project
+        = render "项目", project: project
 
     - if projects.blank?
       %li

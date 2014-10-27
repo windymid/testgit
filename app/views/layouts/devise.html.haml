@@ -21,18 +21,17 @@
               .brand-image.default-brand-image.hidden-sm.hidden-xs
                 = image_tag 'brand_logo.png'
               .brand_text.hidden-xs
-                %h2 Open source software to collaborate on code
+                %h2 协作 分享 开放 共赢
 
                 %p.lead
-                  Manage git repositories with fine grained access controls that keep your code secure.
-                  Perform code reviews and enhance collaboration with merge requests.
-                  Each project can also have an issue tracker and a wiki.
-
+                  * 做最好的嵌入式项目托管平台。
+                  * 使用当今最流行的分布式版本控制系统Git来有效管理您的项目
+                  * 创客协作的最好平台，无论是在公司在家里，随时随地开启工作
           .col-md-5
             = yield
     %hr
     .container
       .footer-links
-        = link_to "Explore", explore_root_path
-        = link_to "Documentation", "http://doc.gitlab.com/"
-        = link_to "About GitLab", "https://about.gitlab.com/"
+        = link_to "浏览", explore_root_path
+        = link_to "文档", "#"
+        = link_to "关于", "#"

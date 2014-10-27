@@ -15,14 +15,11 @@ module VisibilityLevelHelper
       haml_tag :span do
         case level
         when Gitlab::VisibilityLevel::PRIVATE
-          haml_concat "Project access must be granted explicitly for each user."
+          haml_concat "私有项目只有授权用户才能访问"
         when Gitlab::VisibilityLevel::INTERNAL
-          haml_concat "The project can be cloned by"
-          haml_concat "any logged in user."
+          haml_concat "内部项目只要登录就可以访问"
         when Gitlab::VisibilityLevel::PUBLIC
-          haml_concat "The project can be cloned"
-          haml_concat "without any"
-          haml_concat "authentication."
+          haml_concat "公共项目所有人都可以访问"
         end
       end
     end
@@ -33,13 +30,11 @@ module VisibilityLevelHelper
       haml_tag :span do
         case level
         when Gitlab::VisibilityLevel::PRIVATE
-          haml_concat "The snippet is visible only for me"
+          haml_concat "只有自己能看"
         when Gitlab::VisibilityLevel::INTERNAL
-          haml_concat "The snippet is visible for any logged in user."
+          haml_concat "登录后可看"
         when Gitlab::VisibilityLevel::PUBLIC
-          haml_concat "The snippet can be accessed"
-          haml_concat "without any"
-          haml_concat "authentication."
+          haml_concat "所有人可看"
         end
       end
     end

@@ -16,11 +16,11 @@
 
     .repo-info
       - unless project.empty_repo?
-        = link_to pluralize(project.repository.round_commit_count, 'commit'), project_commits_path(project, project.default_branch)
+        = link_to pluralize(project.repository.round_commit_count, '提交commit'), project_commits_path(project, project.default_branch)
         &middot;
-        = link_to pluralize(project.repository.branch_names.count, 'branch'), project_branches_path(project)
+        = link_to pluralize(project.repository.branch_names.count, '分支branch'), project_branches_path(project)
         &middot;
-        = link_to pluralize(project.repository.tag_names.count, 'tag'), project_tags_path(project)
+        = link_to pluralize(project.repository.tag_names.count, '标签tag'), project_tags_path(project)
       - else
         %i.fa.fa-exclamation-triangle
         Empty repository

@@ -1,5 +1,5 @@
 %h3.page-title
-  My Projects
+  我的项目
 .pull-right
   .dropdown.inline
     %a.dropdown-toggle.btn.btn-small{href: '#', "data-toggle" => "dropdown"}
@@ -22,7 +22,7 @@
         = link_to projects_dashboard_filter_path(sort: 'last_updated') do
           Last updated
 %p.light
-  All projects you have access to are listed here. Public projects are not included here unless you are a member
+  所有访问过的项目。( 不包括公共项目，除非你是该项目成员。)
 %hr
 .row
   .col-md-3.hidden-sm.hidden-xs.side-filters
@@ -39,7 +39,7 @@
 
             - if current_user.can_leave_project?(project)
               .pull-right
-                = link_to leave_project_team_members_path(project), data: { confirm: "Leave project?"}, method: :delete, remote: true, class: "btn-tiny btn remove-row", title: 'Leave project' do
+                = link_to leave_project_team_members_path(project), data: { confirm: "离开该项目?"}, method: :delete, remote: true, class: "btn-tiny btn remove-row", title: '离开项目' do
                   %i.fa.fa-sign-out
                   Leave
 
@@ -67,7 +67,7 @@
 
         - if @projects.blank?
           %li
-            .nothing-here-block There are no projects here.
+            .nothing-here-block 没有项目
     .bottom
       = paginate @projects, theme: "gitlab"
 
