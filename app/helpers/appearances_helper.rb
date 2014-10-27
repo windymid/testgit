@@ -4,7 +4,7 @@ module AppearancesHelper
   end
 
   def brand_title
-    'ChinaGit风核开源软件网'
+    'ChinaGit'
   end
 
   def brand_image

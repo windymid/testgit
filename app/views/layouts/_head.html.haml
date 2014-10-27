@@ -7,11 +7,11 @@
   -# https://github.com/gitlabhq/gitlabhq/pull/5958#issuecomment-45397555
   - if controller_name == 'projects' && action_name == 'show'
     %meta{name: "go-import", content: "#{@project.web_url_without_protocol} git #{@project.web_url}.git"}
-  %meta{content: "ChinaGit风核开源软件", name: "description"}
+  %meta{content: "ChinaGit风核开源软件网", name: "description"}
 
   %title
     = "#{title} | " if defined?(title)
-    GitLab
+    ChinaGit
   = favicon_link_tag 'favicon.ico'
   = stylesheet_link_tag    "application", :media => "all"
   = stylesheet_link_tag    "print", :media => "print"
