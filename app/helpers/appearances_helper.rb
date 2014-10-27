@@ -4,7 +4,7 @@ module AppearancesHelper
   end
 
   def brand_title
-    'GitLab Community Edition'
+    'ChinaGit风核开源软件网'
   end
 
   def brand_image
