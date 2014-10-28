@@ -73,25 +73,18 @@ Gitlab::Application.configure do
   config.action_mailer.perform_deliveries = true
   config.action_mailer.raise_delivery_errors = true
   config.action_mailer.delivery_method = :smtp
-#  config.action_mailer.smtp_settings = {
-#    :address => "smtp.gmail.com",
-#    :port => "587",
-#    :domain => "smtp.gmail.com",
-#    :authentication => :plain,
-#    :user_name => "windymid@gmail.com",
-#    :password => "windywong0621A",
-#    :enable_starttls_auto => true
-#  }
 
  config.action_mailer.smtp_settings = {
-    :address => "smtp.qq.com",
-    :port => "465",
-    :domain => "smtp.qq.com",
+    :address => "mail.chinagit.com",
+    :port => "25",
+    :domain => "mail.chinagit.com",
     :authentication => :plain,
-    :user_name => "windycore@qq.com",
-    :password => "windycore123",
+    :user_name => "chinagit",
+    :password => "ABC987az08234A",
     :enable_starttls_auto => true
   }
+
+
 
   config.eager_load = true
   config.assets.js_compressor = :uglifier
