@@ -1,0 +1,3 @@
+development: unix:/alidata/gitlab-7.4.0-0/redis/var/run/redis.sock
+test: unix:/alidata/gitlab-7.4.0-0/redis/var/run/redis.sock
+production: unix:/alidata/gitlab-7.4.0-0/redis/var/run/redis.sock
