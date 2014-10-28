@@ -12,7 +12,7 @@ class Profiles::PasswordsController < ApplicationController
 
   def create
     unless @user.valid_password?(user_params[:current_password])
-      redirect_to new_profile_password_path, alert: 'You must provide a valid current password'
+      redirect_to new_profile_password_path, alert: '您必须提供有效的当前密码'
       return
     end
 
@@ -26,7 +26,7 @@ class Profiles::PasswordsController < ApplicationController
 
     if result
       @user.update_attributes(password_expires_at: nil)
-      redirect_to root_path, notice: 'Password successfully changed'
+      redirect_to root_path, notice: '密码成功修改'
     else
       render :new
     end
@@ -41,21 +41,21 @@ class Profiles::PasswordsController < ApplicationController
     end
 
     unless @user.valid_password?(user_params[:current_password])
-      redirect_to edit_profile_password_path, alert: 'You must provide a valid current password'
+      redirect_to edit_profile_password_path, alert: '您必须提供有效的当前密码'
       return
     end
 
     if @user.update_attributes(password_attributes)
-      flash[:notice] = "Password was successfully updated. Please login with it"
+      flash[:notice] = "密码成功修改，请用新密码重新登录"
       redirect_to new_user_session_path
     else
-      render 'edit'
+      render '编辑'
     end
   end
 
   def reset
     current_user.send_reset_password_instructions
-    redirect_to edit_profile_password_path, notice: 'We sent you an email with reset password instructions'
+    redirect_to edit_profile_password_path, notice: '重设密码说明已经发送到您邮箱。'
   end
 
   private
@@ -65,14 +65,14 @@ class Profiles::PasswordsController < ApplicationController
   end
 
   def set_title
-    @title = "New password"
+    @title = "新密码"
   end
 
   def determine_layout
     if [:new, :create].include?(action_name.to_sym)
       'navless'
     else
-      'profile'
+      '设置'
     end
   end
 
