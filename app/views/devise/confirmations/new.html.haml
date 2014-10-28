@@ -1,6 +1,6 @@
 .login-box
   .login-heading
-    %h3 Resend confirmation instructions
+    %h3 重发确认邮件
   .login-body
     = form_for(resource, as: resource_name, url: confirmation_path(resource_name), html: { method: :post }) do |f|
       .devise-errors
@@ -8,6 +8,6 @@
       .clearfix.append-bottom-20
         = f.email_field :email, placeholder: 'Email', class: "form-control", required: true
       .clearfix.append-bottom-10
-        = f.submit "Resend confirmation instructions", class: 'btn btn-success'
+        = f.submit "重发确认邮件", class: 'btn btn-success'
   .login-footer
     = render 'devise/shared/sign_in_link'

@@ -3,58 +3,58 @@
 en:
   errors:
     messages:
-      expired: "has expired, please request a new one"
-      not_found: "not found"
-      already_confirmed: "was already confirmed, please try signing in"
-      not_locked: "was not locked"
+      expired: "已经过期，请重试"
+      not_found: "没找到"
+      already_confirmed: "已经确认，请直接登录"
+      not_locked: "没有锁定"
       not_saved:
-        one: "1 error prohibited this %{resource} from being saved:"
-        other: "%{count} errors prohibited this %{resource} from being saved:"
+        one: "1个错误阻止[%{resource}]保存"
+        other: "%{count}个错误阻止[%{resource}]保存:"
 
   devise:
     failure:
-      already_authenticated: 'You are already signed in.'
-      unauthenticated: 'You need to sign in before continuing.'
-      unconfirmed: 'You have to confirm your account before continuing.'
-      locked: 'Your account is locked.'
-      not_found_in_database: 'Invalid email or password.'
-      invalid: 'Invalid email or password.'
-      invalid_token: 'Invalid authentication token.'
-      timeout: 'Your session expired, please sign in again to continue.'
-      inactive: 'Your account was not activated yet.'
+      already_authenticated: '您已经登录.'
+      unauthenticated: '您需要登录才能继续操作.'
+      unconfirmed: '您需要确认您的邮箱才能继续操作.'
+      locked: '您的账户已经锁定.'
+      not_found_in_database: '无效email或密码.'
+      invalid: '无效email或密码.'
+      invalid_token: '无效授权码.'
+      timeout: '您已超时，请重新登录.'
+      inactive: '您的账户还未激活.'
     sessions:
-      signed_in: 'Signed in successfully.'
-      signed_out: 'Signed out successfully.'
+      signed_in: '登录成功.'
+      signed_out: '退出成功.'
     users_sessions:
       user:
-        signed_in: 'Signed in successfully.'
+        signed_in: '登录成功.'
     passwords:
-      send_instructions: 'You will receive an email with instructions about how to reset your password in a few minutes.'
-      updated: 'Your password was changed successfully. You are now signed in.'
-      updated_not_active: 'Your password was changed successfully.'
-      send_paranoid_instructions: "If your e-mail exists on our database, you will receive a password recovery link on your e-mail"
+      send_instructions: '您将在几分钟内收到一份邮件，指示您如何重设密码。'
+      updated: '您的密码已经修改成功，请用新密码登录。'
+      updated_not_active: '您的密码已经修改成功。'
+      send_paranoid_instructions: "如果数据库中有您的email，您将收到一个包含密码恢复链接的邮件。"
     confirmations:
-      send_instructions: 'You will receive an email with instructions about how to confirm your account in a few minutes.'
-      send_paranoid_instructions: 'If your e-mail exists on our database, you will receive an email with instructions about how to confirm your account in a few minutes.'
-      confirmed: 'Your account was successfully confirmed. You are now signed in.'
+      send_instructions: '您将在几分钟内收到一份邮件，指示您如何确认账户。'
+      send_paranoid_instructions: '您将在几分钟内收到一份邮件，指示您如何确认账户。'
+      confirmed: '您的账户已经确认成功，请登录。'
     registrations:
-      signed_up: 'Welcome! You have signed up successfully.'
-      updated: 'You updated your account successfully.'
-      destroyed: 'Bye! Your account was successfully cancelled. We hope to see you again soon.'
-      signed_up_but_unconfirmed: 'A message with a confirmation link has been sent to your email address. Please open the link to activate your account.'
-      signed_up_but_inactive: 'You have signed up successfully. However, we could not sign you in because your account is not yet activated.'
-      signed_up_but_locked: 'You have signed up successfully. However, we could not sign you in because your account is locked.'
+      signed_up: '欢迎! 您已成功登录。'
+      updated: '您已经成功更新您的账户。'
+      destroyed: '再见! 您的账户已经成功取消，欢迎再次访问!'
+      signed_up_but_unconfirmed: '确认链接信息已经发送到您的邮箱，请打开链接激活您的账户。'
+      signed_up_but_inactive: '您已成功登录，但是您的账户还未激活。'
+      signed_up_but_locked: '您已成功登录，但是您的账户已被锁定。'
     unlocks:
-      send_instructions: 'You will receive an email with instructions about how to unlock your account in a few minutes.'
-      unlocked: 'Your account was successfully unlocked. You are now signed in.'
-      send_paranoid_instructions: 'If your account exists, you will receive an email with instructions about how to unlock it in a few minutes.'
+      send_instructions: '您将在几分钟内收到一份邮件，指示您如何解锁账户。'
+      unlocked: '您的账户已经确认解锁，现在可以登录了。'
+      send_paranoid_instructions: '如果数据库中有您的email，您将收到一个如何解锁账户的邮件。'
     omniauth_callbacks:
-      success: 'Successfully authorized from %{kind} account.'
-      failure: 'Could not authorize you from %{kind} because "%{reason}".'
+      success: '账户 %{kind} 成功授权.'
+      failure: '不能授权 %{kind} 因为 "%{reason}".'
     mailer:
       confirmation_instructions:
-        subject: 'Confirmation instructions'
+        subject: '邮箱确认说明'
       reset_password_instructions:
-        subject: 'Reset password instructions'
+        subject: '重置密码说明'
       unlock_instructions:
-        subject: 'Unlock Instructions'
+        subject: '解锁说明'
